@@ -334,6 +334,16 @@ Send ❤️
 
 </div>
 
+  <div class="slider">
+
+<img src="assets/1.jpg">
+
+<img src="assets/2.jpg">
+
+<img src="assets/3.jpg">
+
+</div>
+
 <script src="script.js"></script>
 
 </body>
