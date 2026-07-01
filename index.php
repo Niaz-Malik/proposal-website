@@ -344,6 +344,12 @@ Send ❤️
 
 </div>
 
+
+  <button id="playMusic">
+
+🎵 Music
+
+</button>
 <script src="script.js"></script>
 
 </body>
