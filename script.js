@@ -244,3 +244,83 @@ e.preventDefault();
 alert("❤️ Thank You!\n\nYour response has been received.");
 
 });
+
+
+
+// =========================
+// Theme
+// =========================
+
+const theme=document.getElementById("theme");
+
+theme.onclick=function(){
+
+document.body.classList.toggle("dark");
+
+}
+
+// =========================
+// Ring
+// =========================
+
+document.getElementById("yes").addEventListener("click",function(){
+
+document.getElementById("ring").style.display="block";
+
+});
+
+// =========================
+// Rose Petals
+// =========================
+
+function petals(){
+
+let petal=document.createElement("div");
+
+petal.className="petal";
+
+petal.innerHTML="🌹";
+
+petal.style.left=Math.random()*100+"vw";
+
+petal.style.animationDuration=(Math.random()*5+5)+"s";
+
+document.body.appendChild(petal);
+
+setTimeout(()=>{
+
+petal.remove();
+
+},10000);
+
+}
+
+setInterval(petals,300);
+
+// =========================
+// Floating Hearts Forever
+// =========================
+
+function heart(){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(Math.random()*30+20)+"px";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+
+h.remove();
+
+},5000);
+
+}
+
+setInterval(heart,700);
