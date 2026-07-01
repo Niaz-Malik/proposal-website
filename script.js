@@ -576,3 +576,15 @@ rose.remove();
 },7000);
 
 },300);
+
+
+
+document.addEventListener("keydown",function(e){
+
+if(e.key=="d"){
+
+document.body.classList.toggle("dark");
+
+}
+
+});
