@@ -588,3 +588,11 @@ document.body.classList.toggle("dark");
 }
 
 });
+
+
+
+playMusic.onclick=function(){
+
+music.play();
+
+}
