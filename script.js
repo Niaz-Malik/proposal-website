@@ -498,3 +498,48 @@ alert("Thank You ❤️");
 return true;
 
 }
+
+
+function ring(){
+
+let ring=document.createElement("div");
+
+ring.innerHTML="💍";
+
+ring.style.position="fixed";
+
+ring.style.left="50%";
+
+ring.style.top="45%";
+
+ring.style.fontSize="120px";
+
+ring.style.transform="translate(-50%,-50%)";
+
+ring.style.animation="zoom 2s";
+
+document.body.appendChild(ring);
+
+setTimeout(()=>{
+
+ring.remove();
+
+},2000);
+
+}
+
+yes.onclick=function(){
+
+document.querySelector(".container").style.display="none";
+
+document.getElementById("proposalPage").style.display="block";
+
+music.play();
+
+fireworks();
+
+hearts();
+
+ring();
+
+}
