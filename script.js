@@ -1,99 +1,246 @@
-const message="Every moment with you is special. Will you be mine forever? ❤️";
+// const message="Every moment with you is special. Will you be mine forever? ❤️";
 
-let i=0;
+// let i=0;
 
-function type(){
+// function type(){
 
-if(i<message.length){
+// if(i<message.length){
 
-document.getElementById("text").innerHTML+=message.charAt(i);
+// document.getElementById("text").innerHTML+=message.charAt(i);
 
-i++;
+// i++;
 
-setTimeout(type,40);
+// setTimeout(type,40);
 
+// }
+
+// }
+
+// type();
+
+// const no=document.getElementById("no");
+
+// function move(){
+
+// let x=Math.random()*(window.innerWidth-150);
+
+// let y=Math.random()*(window.innerHeight-80);
+
+// no.style.position="fixed";
+
+// no.style.left=x+"px";
+
+// no.style.top=y+"px";
+
+// }
+
+// no.onmouseover=move;
+
+// no.ontouchstart=function(e){
+
+// e.preventDefault();
+
+// move();
+
+// }
+
+// document.getElementById("yes").onclick=function(){
+
+// document.querySelector(".buttons").style.display="none";
+
+// document.getElementById("result").style.display="block";
+
+// let end=Date.now()+5000;
+
+// let timer=setInterval(()=>{
+
+// if(Date.now()>end){
+
+// clearInterval(timer);
+
+// return;
+
+// }
+
+// confetti({
+
+// particleCount:80,
+
+// spread:360,
+
+// origin:{
+
+// x:Math.random(),
+
+// y:Math.random()-0.2
+
+// }
+
+// });
+
+// let h=document.createElement("div");
+
+// h.className="heart";
+
+// h.innerHTML="❤️";
+
+// h.style.left=Math.random()*100+"vw";
+
+// document.body.appendChild(h);
+
+// setTimeout(()=>{
+
+// h.remove();
+
+// },4000);
+
+// },250);
+
+// }
+
+
+// ===============================
+// Proposal Website Script
+// ===============================
+
+// Proposal Message
+const proposalText =
+`Every moment with you makes my life brighter.
+
+Your smile is my favorite reason to smile.
+
+I don't know what tomorrow brings,
+but I know one thing...
+
+I want you to be part of my future.
+
+Will you be mine forever? ❤️`;
+
+let i = 0;
+const typing = document.getElementById("typing");
+
+function typeWriter() {
+    if (i < proposalText.length) {
+        typing.innerHTML += proposalText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40);
+    }
 }
 
+typeWriter();
+
+
+// ===============================
+// NO Button Escape
+// ===============================
+
+const noBtn = document.getElementById("no");
+
+function moveButton() {
+
+    const x = Math.random() * (window.innerWidth - 150);
+    const y = Math.random() * (window.innerHeight - 80);
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
 }
 
-type();
+noBtn.addEventListener("mouseover", moveButton);
 
-const no=document.getElementById("no");
+noBtn.addEventListener("touchstart", function(e){
 
-function move(){
+    e.preventDefault();
 
-let x=Math.random()*(window.innerWidth-150);
-
-let y=Math.random()*(window.innerHeight-80);
-
-no.style.position="fixed";
-
-no.style.left=x+"px";
-
-no.style.top=y+"px";
-
-}
-
-no.onmouseover=move;
-
-no.ontouchstart=function(e){
-
-e.preventDefault();
-
-move();
-
-}
-
-document.getElementById("yes").onclick=function(){
-
-document.querySelector(".buttons").style.display="none";
-
-document.getElementById("result").style.display="block";
-
-let end=Date.now()+5000;
-
-let timer=setInterval(()=>{
-
-if(Date.now()>end){
-
-clearInterval(timer);
-
-return;
-
-}
-
-confetti({
-
-particleCount:80,
-
-spread:360,
-
-origin:{
-
-x:Math.random(),
-
-y:Math.random()-0.2
-
-}
+    moveButton();
 
 });
 
-let h=document.createElement("div");
 
-h.className="heart";
+// ===============================
+// YES BUTTON
+// ===============================
 
-h.innerHTML="❤️";
+const yesBtn = document.getElementById("yes");
 
-h.style.left=Math.random()*100+"vw";
+yesBtn.onclick = function(){
 
-document.body.appendChild(h);
+    // Music
+    document.getElementById("music").play();
 
-setTimeout(()=>{
+    // Hide First Page
+    document.querySelector(".container").style.display="none";
 
-h.remove();
+    // Show Form
+    document.getElementById("proposalPage").style.display="block";
 
-},4000);
+    // Fireworks
 
-},250);
+    const duration = 5000;
+
+    const end = Date.now() + duration;
+
+    const timer = setInterval(function(){
+
+        if(Date.now()>end){
+
+            clearInterval(timer);
+
+            return;
+
+        }
+
+        confetti({
+
+            particleCount:80,
+
+            spread:360,
+
+            origin:{
+
+                x:Math.random(),
+
+                y:Math.random()-0.2
+
+            }
+
+        });
+
+    },250);
+
+
+    // Hearts
+
+    for(let i=0;i<80;i++){
+
+        let heart=document.createElement("div");
+
+        heart.className="heart";
+
+        heart.innerHTML="❤️";
+
+        heart.style.left=Math.random()*100+"vw";
+
+        heart.style.animationDuration=(Math.random()*3+2)+"s";
+
+        document.body.appendChild(heart);
+
+    }
 
 }
+
+
+
+// ===============================
+// FORM SUBMIT
+// ===============================
+
+document
+.getElementById("proposalForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("❤️ Thank You!\n\nYour response has been received.");
+
+});
