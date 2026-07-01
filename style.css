@@ -442,6 +442,13 @@ padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
+.dark{
+
+background:#111;
+
+color:white;
+
+}
 
 body{
 background:linear-gradient(135deg,#ff4d6d,#ff8fa3,#ffd6e0);
