@@ -543,3 +543,36 @@ hearts();
 ring();
 
 }
+
+
+setInterval(function(){
+
+let rose=document.createElement("div");
+
+rose.innerHTML="🌹";
+
+rose.style.position="fixed";
+
+rose.style.left=Math.random()*100+"vw";
+
+rose.style.top="-50px";
+
+rose.style.fontSize="35px";
+
+rose.style.transition="7s linear";
+
+document.body.appendChild(rose);
+
+setTimeout(()=>{
+
+rose.style.top="110vh";
+
+},100);
+
+setTimeout(()=>{
+
+rose.remove();
+
+},7000);
+
+},300);
