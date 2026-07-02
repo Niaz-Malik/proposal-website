@@ -251,7 +251,7 @@ Send ❤️
 
 <div class="container">
 
-<img src="C:\Users\admin\Downloads\ChatGPT Image Jun 4, 2026, 02_58_28 PM.png" class="profile">
+<img src="image/ChatGPT Image Jun 4, 2026, 02_58_28 PM.png" class="profile">
 
 <h1>M Niaz Malik ❤️</h1>
 
