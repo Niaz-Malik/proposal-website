@@ -336,11 +336,11 @@ Send ❤️
 
   <div class="slider">
 
-<img src="assets/1.jpg">
+<img src="image/ChatGPT Image Jun 4, 2026, 02_58_28 PM.png">
 
-<img src="assets/2.jpg">
+<img src="image/ChatGPT Image Jun 4, 2026, 02_58_28 PM.png">
 
-<img src="assets/3.jpg">
+<img src="image/ChatGPT Image Jun 4, 2026, 02_58_28 PM.png">
 
 </div>
 
